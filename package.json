@@ -1,22 +1,18 @@
 {
-	"name": "craft4-ddev-vite-blueprint",
+	"name": "dbs-craft4-scaffolding",
 	"version": "1.0.0",
-	"description": "Craft CMS 4 + DDEV + Vite Blueprint",
+	"description": "Craft CMS 4 + DDEV + Vite + barba.js + gsap",
 	"main": "vite.config.js",
 	"scripts": {
 		"dev": "node emptyDistDir.js && node viteDevServerToggle.js 1 && vite --host",
 		"build": "node viteDevServerToggle.js 0 && vite build"
 	},
+	"author": "Daniel Crump + Laura Bennett",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/thomasbendl/craft4-ddev-vite-blueprint.git"
-	},
-	"author": "@thomasbendl, @smonist",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/thomasbendl/craft4-ddev-vite-blueprint/issues"
-	},
-	"homepage": "https://github.com/thomasbendl/craft4-ddev-vite-blueprint#readme",
+		"url": ""
+	  },
+	"license": "UNLICENSED",
 	"devDependencies": {
 		"@vitejs/plugin-legacy": "^1.6.3",
 		"autoprefixer": "^10.4.0",
