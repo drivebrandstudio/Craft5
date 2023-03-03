@@ -18,52 +18,52 @@ Scaffolding for a CraftCMS 4 project powered by Vite + barba.js + gsap and setup
 2. **Remove link to scaffolding git repo**
 <br />
 
-`rm -rf .git`
+```rm -rf .git```
 ---
 3. **Next configure what type of project the website will utilize**
 <br />
 
-`ddev config`
+```ddev config```
 ---
 
 4. **Now there should be a ddev > config.yaml file**
 
-[ ] add 
+add 
 
 <br />
 
- `webimage_extra_packages: [gconf-service, libasound2, libatk1.0-0, libcairo2, libgconf-2-4, libgdk-pixbuf2.0-0, libgtk-3-0, libnspr4, libpango-1.0-0, libpangocairo-1.0-0, libx11-xcb1, libxcomposite1, libxcursor1, libxdamage1, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, libxtst6, fonts-liberation, libnss3, xdg-utils]`
+ ```webimage_extra_packages: [gconf-service, libasound2, libatk1.0-0, libcairo2, libgconf-2-4, libgdk-pixbuf2.0-0, libgtk-3-0, libnspr4, libpango-1.0-0, libpangocairo-1.0-0, libx11-xcb1, libxcomposite1, libxcursor1, libxdamage1, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, libxtst6, fonts-liberation, libnss3, xdg-utils]```
 <br />
 
-[ ] **Check .ddev > config.yaml to see if the php_version is 8.1**
+ **php_version is 8.1**
 <br />
 
-[ ] **Check .ddev > config.yaml to see if the database type is mariadb and v10.4**
+ **database type is mariadb and v10.4**
 <br />
 
-[ ] **Check .ddev > config.yaml to see if the webserver_type is nginx-fpm**
+ **webserver_type is nginx-fpm**
 ---
 7. **Update package.json information such as project name, author, etc**
 ---
 8. **Run composer to fetch initial dependencies**
 <br />
 
-`composer install`
+```composer install```
 ---
 9. **Run make to handle remaining DDEV commands**
 <br />
 
-`make install`
+```make install```
 ---
 10. **Start the DDEV servers**
 <br />
 
-`ddev start`
+```ddev start```
 ---
 11. **Start the Vite servers**
 <br />
 
-`make dev`
+```make dev```
 ---
 12. **Navigate to https://{the-project-name}.ddev.site or https://{the-project-name}.ddev.site/admin**
 
