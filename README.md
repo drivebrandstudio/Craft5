@@ -5,6 +5,7 @@ Scaffolding for a CraftCMS 4 project powered by Vite + barba.js + gsap and setup
 -   Docker, https://www.docker.com
 -   DDEV, https://ddev.com
 
+## Steps
 1. **Note the `./` at the end of the clone script**
 - `git clone https://github.com/drivebrandstudio/Craft4-Scaffolding.git ./`
 - `git clone git@github.com:drivebrandstudio/Craft4-Scaffolding.git ./`
