@@ -4,7 +4,7 @@ import confetti from "canvas-confetti/src/confetti";
 
 import { gsap } from "gsap";
 
-import "../sass/main.scss";
+import "../scss/main.scss";
 
 barba.init({
 	debug: true,
