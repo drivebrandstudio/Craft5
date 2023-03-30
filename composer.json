@@ -2,9 +2,7 @@
 	"require": {
 		"craftcms/cms": "4.3.1",
 		"craftcms/redactor": "^3.0",
-		"nystudio107/craft-seomatic": "4.0.12",
 		"nystudio107/craft-vite": "^4.0",
-		"putyourlightson/craft-blitz": "4.2.3",
 		"putyourlightson/craft-sherlock": "4.2.0",
 		"shornuk/craft-plausible": "2.0.0",
 		"vlucas/phpdotenv": "^5.4.0"
