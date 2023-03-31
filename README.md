@@ -13,7 +13,11 @@ Scaffolding for a CraftCMS 4 project powered by Vite + barba.js + gsap and setup
 
 - Ubuntu, install through the windows store
     *From an ==admin powershell 5== terminal, set Ubuntu to run wsl2 with:*  
-    `wsl --set-version Ubuntu 2`
+
+    ```PowerShell
+    wsl --set-version Ubuntu 2
+    ```
+
 - [Docker](https://www.docker.com)
 - [DDEV](https://ddev.com)
 - NodeJS ==version 14+==, I recommend using [NVM](https://github.com/nvm-sh/nvm) if using Windows
@@ -25,25 +29,54 @@ Scaffolding for a CraftCMS 4 project powered by Vite + barba.js + gsap and setup
 
 1. **Note the `./` at the end of the clone script**
 
-    - HTTPS: `git clone https://github.com/drivebrandstudio/Craft4-Scaffolding.git ./`  
-or
-    - ==SSH==: `git clone git@github.com:drivebrandstudio/Craft4-Scaffolding.git ./`
+    - HTTPS:
+
+    ```shell
+    git clone https://github.com/drivebrandstudio/Craft4-Scaffolding.git ./
+    ```  
+
+    - ==SSH==:
+
+    ```shell
+    git clone git@github.com:drivebrandstudio/Craft4-Scaffolding.git ./
+    ```
 
 1. **Remove link to scaffolding git repo:**
-`rm -rf .git`
+
+```shell
+rm -rf .git
+```
 
 1. **Initialize with a new repository:**  
-`git init`
+
+```shell
+git init
+```
 
 1. **Run npm install:**  
-`npm install`
+
+```shell
+npm install
+```
 
 1. **Allow DDEV to configure the project**
-`ddev config`
-*This will probably require certain php extentions to be enabled. Find the php.ini file on your system with*:  
-`php --ini`
+
+```shell
+ddev config
+```
+
+*This will probably require certain php extentions to be enabled. Find the php.ini file on your system with*:
+
+```shell
+php --ini
+```
+
 *Then make sure you have admin privileges with*  
-`sudo nano {path to php.ini}`  
+
+```shell
+sudo nano {path to php.ini}
+```
+
 *and remove the* `;` *before the needed ext*
 
 1. **Check .ddev > config.yaml to see if**:
@@ -51,7 +84,14 @@ or
     - The php_version is ==8.1==
     - Database type is mariadb and v10.4
     - webserver_type is nginx-fpm
-    - `webimage_extra_packages: [gconf-service, libasound2, libatk1.0-0, libcairo2, libgconf-2-4, libgdk-pixbuf2.0-0, libgtk-3-0, libnspr4, libpango-1.0-0, libpangocairo-1.0-0, libx11-xcb1, libxcomposite1, libxcursor1, libxdamage1, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, libxtst6, fonts-liberation, libnss3, xdg-utils]`
+    - Add the following block:
+
+    ```json
+    {
+        ...,
+        webimage_extra_packages: [gconf-service, libasound2, libatk1.0-0, libcairo2, libgconf-2-4, libgdk-pixbuf2.0-0, libgtk-3-0, libnspr4, libpango-1.0-0, libpangocairo-1.0-0, libx11-xcb1, libxcomposite1, libxcursor1, libxdamage1, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, libxtst6, fonts-liberation, libnss3, xdg-utils]
+    }
+    ```
 
 1. **Update package.json**
 
@@ -60,16 +100,28 @@ or
     - etc
 
 1. **Run composer to fetch initial dependencies**
-`composer install`
+
+```shell
+composer install
+```
 
 1. **Run make to handle remaining DDEV commands**
-`make install`
+
+```shell
+make install
+```
 
 1. **Start the DDEV servers**
-`ddev start`
+
+```shell
+ddev start
+```
 
 1. **Start the Vite servers**
-`make dev`
+
+```shell
+make dev
+```
 
 1. **Navigate to <https://{the-project-name}.ddev.site> or <https://{the-project-name}.ddev.site/admin>**
 
