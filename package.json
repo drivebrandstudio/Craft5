@@ -1,7 +1,7 @@
 {
-    "name": "wmchc",
+    "name": "dbs-craft4-scaffolding",
     "version": "1.0.0",
-    "description": "Craft CMS 4 for WMCHC",
+    "description": "Craft CMS 4 + DDEV + Vite + barba.js + gsap",
     "main": "vite.config.js",
     "scripts": {
         "dev": "node emptyDistDir.js && node viteDevServerToggle.js 1 && vite --host",
