@@ -1,6 +1,4 @@
 import barba from "@barba/core";
-// TODO: Remove before beginning development
-import confetti from "canvas-confetti/src/confetti";
 import { gsap } from "gsap";
 import "../scss/main.scss";
 
