@@ -111,3 +111,4 @@ dist
 /storage/runtime
 /config/project
 /.ddev/config.yaml
+.env
