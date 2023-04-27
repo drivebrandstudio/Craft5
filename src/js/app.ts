@@ -1,15 +1,13 @@
 import barba from "@barba/core";
-
-
 // TODO: Remove before beginning development
 import confetti from "canvas-confetti/src/confetti";
-
 import { gsap } from "gsap";
 import "../scss/main.scss";
 
 barba.init({
 	debug: true,
 	transitions: [
+
 		// Prevent flicker when navigating to same route
 		{
 			name: "self",
@@ -133,64 +131,7 @@ barba.init({
 
 // TODO: Remove before beginning development
 barba.hooks.once((data) => {
-	console.log(data.next.namespace);
-	if (data.next.namespace == "home") {
-		initConfetti();
-	}
-	gsap.set(".animate", {
-		scale: 2.6,
-		opacity: 0,
-		force3D: false,
-	});
-	gsap.to(".animate", {
-		opacity: 1,
-		delay: 0.5,
-		duration: 0.7,
-		scale: 1,
-		force3D: false,
-		ease: "bounce.out",
-	});
+	
 });
 
 barba.hooks.enter((data) => {});
-
-function initConfetti() {
-	setTimeout(() => {
-		var duration = 15 * 1000;
-		var animationEnd = Date.now() + duration;
-		var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-		function randomInRange(min, max) {
-			return Math.random() * (max - min) + min;
-		}
-
-		var interval = setInterval(function () {
-			var timeLeft = animationEnd - Date.now();
-
-			if (timeLeft <= 0) {
-				return clearInterval(interval);
-			}
-
-			var particleCount = 50 * (timeLeft / duration);
-			// since particles fall down, start a bit higher than random
-			confetti(
-				Object.assign({}, defaults, {
-					particleCount,
-					origin: {
-						x: randomInRange(0.1, 0.3),
-						y: Math.random() - 0.2,
-					},
-				})
-			);
-			confetti(
-				Object.assign({}, defaults, {
-					particleCount,
-					origin: {
-						x: randomInRange(0.7, 0.9),
-						y: Math.random() - 0.2,
-					},
-				})
-			);
-		}, 250);
-	}, 1000);
-}
