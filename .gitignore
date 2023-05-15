@@ -36,7 +36,6 @@ node_modules/
 
 #ddev and project files 
 /config/project
-.ddev
 .env
 package-lock.json
 .vscode
