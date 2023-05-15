@@ -1,36 +1,40 @@
-import liveReload from "vite-plugin-live-reload";
-import legacy from "@vitejs/plugin-legacy";
-import critical from "rollup-plugin-critical";
-import viteCompression from "vite-plugin-compression";
+import liveReload from 'vite-plugin-live-reload'
+import legacy from '@vitejs/plugin-legacy'
+import critical from 'rollup-plugin-critical'
+import viteCompression from 'vite-plugin-compression'
 
 export default ({ command }) => ({
-	base: command === "serve" ? "" : "/dist/",
+	base: command === 'serve' ? '' : '/dist/',
 	css: { preprocessorOptions: { scss: { charset: false } } },
 	build: {
 		manifest: true,
-		outDir: "./web/dist/",
+		outDir: './web/dist/',
 		rollupOptions: {
 			input: {
-				app: "./src/js/app.ts",
+				app: './src/js/app.ts',
+			},
+			output: {
+				sourcemap: true,
 			},
 		},
 	},
 	server: {
-		host: "0.0.0.0",
+		host: '0.0.0.0',
 		port: 3000,
+        strictPort: true,
 	},
 	plugins: [
-		liveReload(["./templates/**/*", "./vendor/szenario/**/*"]),
+		liveReload(['./templates/**/*', './vendor/szenario/**/*']),
 		legacy({
-			targets: ["defaults"],
-			additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
+			targets: ['defaults'],
+			additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
 		}),
 		critical({
-			criticalUrl: "http://localhost",
-			criticalBase: "./web/dist/criticalcss/",
-			criticalPages: [{ uri: "/", template: "index" }],
+			criticalUrl: 'http://localhost',
+			criticalBase: './web/dist/criticalcss/',
+			criticalPages: [{ uri: '/', template: 'index' }],
 			criticalConfig: {},
 		}),
 		viteCompression(),
 	],
-});
+})
