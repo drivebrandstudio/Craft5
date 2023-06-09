@@ -6,24 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Dependency directories
-node_modules/
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
-
 # jet brains IDE files
 .idea
 /.idea
@@ -37,5 +19,11 @@ node_modules/
 #ddev and project files 
 /config/project
 .env
+/.env
+/web/.htaccess
 package-lock.json
 .vscode
+
+#customer asset files
+/web/assets/*
+!/web/assets/.gitkeep
