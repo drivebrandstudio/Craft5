@@ -1,29 +1,18 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
 
-# jet brains IDE files
-.idea
-/.idea
 /vendor
-.DS_Store
-/web/cpresources
-/storage/config-deltas
-/storage/logs
-/storage/runtime
 
-#ddev and project files 
-/config/project
+#ddev
+/config
 .env
-/.env
 /web/.htaccess
-package-lock.json
-.vscode
-
 #customer asset files
 /web/assets/*
 !/web/assets/.gitkeep
+web/cpresources
+node_modules/
+settings.json
+storage
+.vscode
+package-lock.json
+composer.lock
+node_modules
