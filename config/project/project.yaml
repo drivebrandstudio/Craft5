@@ -1,0 +1,27 @@
+dateModified: 1681753059
+email:
+  fromEmail: daniel@drivebrandstudio.com
+  fromName: 'Craft4 Scaffolding Ddev'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    ca348b20-8894-41e8-8cbd-4b61bda22ba5: 'Craft4 Scaffolding Ddev' # Craft4 Scaffolding Ddev
+    cc5695ce-fe88-4b1b-a774-d1d2d549da00: 'Craft4 Scaffolding Ddev' # Craft4 Scaffolding Ddev
+    f7f984ab-6cc7-49df-97b0-7b95511d8403: Common # Common
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Craft4 Scaffolding Ddev'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

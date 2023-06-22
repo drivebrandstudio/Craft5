@@ -1,18 +1,13 @@
-
-/vendor
-
-#ddev
-/config
-.env
-/web/.htaccess
-#customer asset files
-/web/assets/*
-!/web/assets/.gitkeep
-web/cpresources
 node_modules/
+/vendor
+.env
 settings.json
-storage
 .vscode
+storage
+web/cpresources
+web/assets
+web/.htaccess
 package-lock.json
-composer.lock
-node_modules
+*.lock
+*.sql
+*.log
