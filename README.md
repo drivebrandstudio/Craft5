@@ -48,39 +48,28 @@ PLEASE CHECK OUT THE [GITHUB WIKI](https://github.com/drivebrandstudio/Craft4-Sc
    git remote -v
    ```
 
-1. **Run npm install:**  
-
+1. **Allow DDEV and makefile to configure the project**
    ```shell
-   npm install
+   make dev
+   ```
+   This should result in a .env file that is missing the craft security key
+
+   **Cancel the terminal after the Vite server starts up with Ctrl+C**
+
+1. **Run craft to set up security key**
+   
+   This will result in an error, do not worry, just get the security key
+   ```shell
+   php craft setup/security-key
    ```
 
-1. **Allow DDEV to configure the project**
-   ```shell
-   ddev config
-   ```
-   *This will probably require certain php extentions to be enabled. Find the php.ini file on your system with*:
-   ```shell
-   php --ini
-   ```
-   *Then make sure you have admin privileges with*
-   ```shell
-   sudo nano {path to php.ini}
-   ```
-   *and remove the* `;` *before the needed ext*
+2. **Update package.json**
 
-1. **Update package.json**
-
-    - project name (Must follow [NPM package naming convention](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name))
+    - [Project name](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
     - author
     - description
     - etc
 
-1. **Run make dev**
-
-   ```shell
-   make dev
-   ```
-
-1. **Navigate to <https://{the-project-name}.ddev.site> or <https://{the-project-name}.ddev.site/admin>**
+3. **Navigate to <https://{the-project-name}.ddev.site/admin>**
 
 If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)

@@ -1,9 +1,9 @@
 .PHONY: build dev up install
 
 build: up
-	ddev exec yarn build
+	ddev exec npm run build
 dev: up
-	ddev exec yarn dev
+	ddev exec npm run dev
 install: up build
 	ddev exec php craft setup/app-id \
 		$(filter-out $@,$(MAKECMDGOALS))
@@ -19,7 +19,7 @@ up:
 	if [ ! "$$(ddev describe | grep OK)" ]; then \
 		ddev start; \
 		ddev composer install; \
-		ddev exec yarn install; \
+		ddev exec npm install; \
     fi
 %:
 	@:
