@@ -50,17 +50,7 @@ PLEASE CHECK OUT THE [GITHUB WIKI](https://github.com/drivebrandstudio/Craft4-Sc
 
 1. **Allow DDEV and makefile to configure the project**
    ```shell
-   make dev
-   ```
-   This should result in a .env file that is missing the craft security key
-
-   **Cancel the terminal after the Vite server starts up with Ctrl+C**
-
-1. **Run craft to set up security key**
-   
-   This will result in an error, do not worry, just get the security key
-   ```shell
-   php craft setup/security-key
+   make install
    ```
 
 2. **Update package.json**
@@ -70,6 +60,16 @@ PLEASE CHECK OUT THE [GITHUB WIKI](https://github.com/drivebrandstudio/Craft4-Sc
     - description
     - etc
 
-3. **Navigate to <https://{the-project-name}.ddev.site/admin>**
+1. **Start the dev servers**
+```shell
+make dev
+```
+
+1. **Allow DDEV to open the browser, so split your vscode terminal**
+   ```shell
+   ddev launch
+   ```
+
+1. **Navigate to <https://{the-project-name}.ddev.site/admin>**
 
 If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
