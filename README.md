@@ -1,7 +1,7 @@
 
 # Drive Brand Studio startup guide (specifically for windows PCs)
 
-## Tips/FAQ located at end of instructions
+___Tips/FAQ located at end of instructions___
 
 
 ## Requirements
@@ -10,65 +10,72 @@
 2. Ubuntu
 3. DDEV
 
-## From nothing locally -> Full-blown website
+## Steps to go from nothing locally -> Full-blown website
 1. Clone the scaffolding code **OR** use the scaffold to start a templated github repo:
 
-**Cloning**
-
-Create a local directory, name it, CD into it, then clone the scaffolding repo with
-
-    - SSH (preferred):
-
-    ```shell
-    git clone git@github.com:drivebrandstudio/Craft4-Scaffolding.git ./
-    ```
-
-    - HTTPS:
-
-    ```shell
-    git clone https://github.com/drivebrandstudio/Craft4-Scaffolding.git ./
-    ```
-then 
-
-   ```shell
-   git remote set-url origin https://github.com/OWNER/REPOSITORY.git
-   ```
-   and make sure you're pointing to the correct spot with
-
+   <details>
+      <summary>Creating folder on local computer</summary>
+      <p>
+      SSH (preferred):
+      
       ```shell
-   git remote -v
-   ```
+         git clone git@github.com:drivebrandstudio/Craft4-Scaffolding.git ./
+      ```
+   
+      HTTPS:
+   
+      ```shell
+      git clone https://github.com/drivebrandstudio/Craft4-Scaffolding.git ./
+      ```
+         
+      then **Make sure you replace the OWNER/REPOSITORY in the next script with your github repo link**
+   
+      ```shell
+      git remote set-url origin [https://github.com/OWNER/REPOSITORY.git]
+      ```
+      and make sure you're pointing to the correct spot with
+   
+      ```shell
+      git remote -v
+      ```
+      </p>
+   </details>
+   
+   <details>
+      <summary>
+         Templated github repo 
+      </summary>
+      <p>
+         Create a github repo using the template and  clone that to your pc
+      </p>
+   </details>
 
-**Templated github repo** 
 
-Create a github repo using the template and clone that to your pc
-
-
-2. **Allow DDEV and makefile to configure the project**
+1. **Allow DDEV and makefile to configure the project**
    ```shell
    make install
    ```
 
-3. **Update package.json, make this project truly your own :D**
+2. **Update package.json, make this project truly your own :D**
 
     - [Project name](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
     - author
     - description
     - etc
 
-4. **Start the dev servers**
-```shell
-make dev
-```
+3. **Start the dev servers**
+   ```shell
+   make dev
+   ```
 
-1. **Allow DDEV to open the browser, so split your vscode terminal**
+4. **Allow DDEV to open the browser, so split your vscode terminal**
    ```shell
    ddev launch
    ```
 
-2. **Navigate to <https://{the-project-name}.ddev.site/admin>**
+5. **Navigate to <https://{the-project-name}.ddev.site/admin>**
 
-If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
+   If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
 
 ## FAQ/Tips
 ### Errors during install
