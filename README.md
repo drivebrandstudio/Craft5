@@ -50,30 +50,38 @@ ___Tips/FAQ located at end of instructions___
       </p>
    </details>
 
+1. **Add .env file**
+
 
 1. **Allow DDEV and makefile to configure the project**
    ```shell
    make install
    ```
 
-2. **Update package.json, make this project truly your own :D**
+   This may take a few minutes. Let the terminal run. If nothing is happening after 5 minutes (which feels like a very long time...), try running
+
+   ```shell
+   ddev poweroff
+   ```
+
+3. **Update package.json, make this project truly your own :D**
 
     - [Project name](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
     - author
     - description
     - etc
 
-3. **Start the dev servers**
+4. **Start the dev servers**
    ```shell
    make dev
    ```
 
-4. **Allow DDEV to open the browser, so split your vscode terminal**
+5. **Allow DDEV to open the browser, so split your vscode terminal**
    ```shell
    ddev launch
    ```
 
-5. **Navigate to <https://{the-project-name}.ddev.site/admin>**
+6. **Navigate to <https://{the-project-name}.ddev.site/admin>**
 
    If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
 
