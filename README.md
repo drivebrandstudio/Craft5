@@ -79,7 +79,7 @@ ___Tips/FAQ located at end of instructions___
 
 ## FAQ/Tips
 ### Errors during install
-1. Follow the DDEV instructions slowly and carefully. Read each line all the way through, English is not their first language! (but they speak it gooder than I 😝)
+1. Follow the DDEV instructions slowly and carefully. Read each line all the way through, it's faster than skimming and hitting an error and having to debug...
 2. Uninstall Ubuntu (all programs related to Ubuntu: Ubuntu, 'install REALEASE (Ubuntu)', .... )
 ### Prettier
 1. You will need to restart the vscode window from the Command Palette (ctrl+shift+p) 
