@@ -7,6 +7,7 @@ storage
 web/cpresources
 web/assets
 web/.htaccess
+web/dist
 package-lock.json
 *.lock
 *.sql
