@@ -6,6 +6,7 @@
             {{ siteName }}
         </title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link rel="preload stylesheet" href="{{ craft.vite.asset('src/scss/main.scss') }}" as="style" />
         {{ craft.vite.includeCriticalCssTags() }}
         {{ craft.vite.script('src/js/app.ts') }}
     </head>
