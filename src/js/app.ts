@@ -1,7 +1,8 @@
 import barba from "@barba/core";
 import { gsap } from "gsap";
-import "../scss/main.scss";
 import $ from "jquery";
+
+import "../scss/main.scss";
 
 // if(barba.transitions.isRunning) {
 //   prevent routing button clicks
