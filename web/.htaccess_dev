@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Cache-busting
+    RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteRule ^((.*?\/)*?)([a-z\.\-]+)(\d+)\.(css|js)$ $1$3$5 [NC,L]
+    RewriteRule ^((.*?\/)*?)([0-9a-zA-Z\.\-_]+)\.(\d+)(\.css|\.js)$ $1$3$5 [NC,L]
+
+    # Send would-be 404 requests to Craft
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+    RewriteRule (.+) index.php?p=$1 [QSA,L]
+</IfModule>
+
+# Disable cacheing for mobile development
+<filesMatch "\.(html|htm|js|css|png|jpg|jpeg|gif|svg)$">
+  FileETag None
+  <ifModule mod_headers.c>
+     Header unset ETag
+     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     Header set Pragma "no-cache"
+     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+  </ifModule>
+</filesMatch>

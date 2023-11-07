@@ -1,0 +1,78 @@
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Cache-busting: this is how the server finds our minified/combined static assets
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^((.*?\/)*?)([0-9a-zA-Z\.\-_]+)\.(\d+)(\.css|\.js)$ $1$3$5 [NC,L]
+
+
+  #RewriteRule ^index\.html$ / [NC,R=301,L]
+
+  # Handle www-less domain and alternative domains
+  #RewriteCond %{HTTP_HOST} ^OTHERDOMAIN\.com$ [OR]
+  #RewriteCond %{HTTP_HOST} ^DOMAIN\.com$
+  #RewriteRule (.*)$ http://www.DOMAIN.com/$1 [R=301,L]
+
+  # Force TLS
+  #RewriteCond %{REQUEST_METHOD} !^POST$
+  #RewriteCond %{HTTPS} !=on
+  #RewriteCond %{HTTP_HOST} ^www\.DOMAIN\.com$
+  #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Send would-be 404 requests to Craft
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+  RewriteRule (.+) index.php?p=$1 [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Disable ETags
+  Header unset ETag
+  FileEtag None
+
+  # For Security
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header add Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# Compress output
+<IfModule mod_deflate.c>
+  <filesMatch "\.(jpg|jpeg|gif|png|js|css|html|php|svg)$">
+    SetOutputFilter DEFLATE
+  </filesMatch>
+</IfModule>
+
+# Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 0 seconds"
+
+  # Non-cachable content
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/xml "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType application/rss+xml "access plus 0 seconds"
+  ExpiresByType application/atom+xml "access plus 0 seconds"
+
+  # Set expires tags on various file types... so that the browser wont attempt to reload them.
+  ExpiresByType image/jpg "access plus 1 day"
+  ExpiresByType image/gif "access plus 1 day"
+  ExpiresByType image/gif "access plus 1 day"
+  ExpiresByType image/ico "access plus 1 day"
+  ExpiresByType image/png "access plus 1 day"
+  ExpiresByType video/x-flv "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 hour"
+  ExpiresByType application/x-shockwave-flash "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 hour"
+  ExpiresByType text/javascript "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 hour"
+
+  # Useful, but careful with this as it can be difficult to undo
+  <IfModule mod_headers.c>
+    # Setting cache control to public allows proxy servers to cache the items too.
+    # Header set Cache-Control "public"
+  </IfModule>
+</IfModule>
