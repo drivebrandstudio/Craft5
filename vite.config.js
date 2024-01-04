@@ -9,7 +9,7 @@ export default ({ command }) => ({
     outDir: "./web/dist/",
     sourcemap: true,
     rollupOptions: {
-      input: {  css: "src/scss/main.scss", app: "/src/js/app.ts" },
+      input: { app: "/src/js/app.js", css: "src/scss/main.scss" },
       output: { sourcemap: true },
     },
   },
@@ -18,5 +18,5 @@ export default ({ command }) => ({
     port: 3000,
     strictPort: true,
   },
-  plugins: [liveReload(["./templates/**/*"]), viteCompression()],
+  plugins: [liveReload(["./templates/**/*", "./src/**/*"]), viteCompression()],
 });
