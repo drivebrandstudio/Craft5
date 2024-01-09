@@ -1,4 +1,4 @@
-dateModified: 1681753059
+dateModified: 1704833946
 email:
   fromEmail: daniel@drivebrandstudio.com
   fromName: 'Craft4 Scaffolding Ddev'
@@ -17,7 +17,7 @@ system:
   edition: solo
   live: true
   name: 'Craft4 Scaffolding Ddev'
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
