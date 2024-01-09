@@ -2,8 +2,6 @@
 settings.json
 .vscode
 storage
-package-lock.json
-*.lock
 *.sql
 *.log
 node_modules/
