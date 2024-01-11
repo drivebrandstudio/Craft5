@@ -1,4 +1,4 @@
-import barba from "@barba/core";
+import barba, { ITransitionPage } from "@barba/core";
 import { gsap } from "gsap";
 import $ from "jquery";
 
@@ -7,7 +7,7 @@ import $ from "jquery";
 // 	 return;
 // }
 
-const genericTransition = {
+const genericTransition: ITransitionPage = {
   // Before current component leaves, set next to not take up dom space
   before(data: any) {
     gsap.set(data.next.container, {
@@ -54,6 +54,8 @@ const genericTransition = {
 // Hooks for page transitions
 barba.init({
   prevent: ({ el }) => el.classList && el.classList.contains("prevent-barba"),
+  prefetchIgnore: true,
+  timeout: 5000,
   transitions: [
     // Same route animation
     {
