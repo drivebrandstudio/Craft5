@@ -9,7 +9,7 @@ export default ({ command }) => ({
     outDir: "./web/dist/",
     sourcemap: true,
     rollupOptions: {
-      input: { app: "/src/js/app.js", css: "src/scss/main.scss" },
+      input: { app: "/src/js/app.js", css: "/src/scss/main.scss" },
       output: { sourcemap: true },
     },
   },
