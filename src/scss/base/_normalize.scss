@@ -35,6 +35,24 @@ $h6_margin: 2.33em 0 !default;
 $background: var(--theme-color-background) !default;
 $color: var(--theme-color-blue) !default;
 
+// Drive Brand Studio specific CSS Reset
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+  }
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+}
+
 // =============================================================================
 // HTML5 display definitions
 // =============================================================================
