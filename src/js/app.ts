@@ -1,12 +1,16 @@
+// LIBRARY IMPORTS
 import barba, { ITransitionPage } from "@barba/core";
 import { gsap } from "gsap";
 import $ from "jquery";
 
+// CUSTOM CODE IMPORTS
+
+// Uncomment this if you want to stop users from routing mid animation
 // if(barba.transitions.isRunning) {
-//   prevent routing button clicks
 // 	 return;
 // }
 
+// Default page fade transition
 const genericTransition: ITransitionPage = {
   // Before current component leaves, set next to not take up dom space
   before(data: any) {
@@ -51,33 +55,34 @@ const genericTransition: ITransitionPage = {
   },
 };
 
-// Hooks for page transitions
+// Barba replaces a multi-page app (w/ a refresh whenever the user navigates) with a single
+// page app philosophy.
 barba.init({
+  // If we want to force a refresh on navigation, class='prevent-barba' on the element
   prevent: ({ el }) => el.classList && el.classList.contains("prevent-barba"),
+  // When user hovers a link, Barba will try to fetch+cache that page in case the user navigates.
+  // If there is a large list of links and the user hovers all of them quickly, this
+  // can cause those links to fail
   prefetchIgnore: true,
   timeout: 5000,
   transitions: [
-    // Same route animation
+    // Attempting to route to the same location breaks Barba. Ensure 
     {
       name: "self",
     },
     // Default pages
     {
       name: "default-transition",
+      // Sync means all animations will play at the same time (before+...+enter)
+      // Rather than one at a time (before -> .... -> enter)
       sync: true,
       ...genericTransition,
     },
   ],
 });
 
-// same as $(document).ready()
+// When the site first loads, this code will run
 $(() => {});
 
-// $(() => {}) will never trigger after first load
-// So tie into enter hook to hydrate components
+// After any transition, instruct barba to rerun any JS over the newly painted elements
 barba.hooks.enter(() => {});
-
-// TODO: Remove before beginning development
-barba.hooks.once((data: any) => {});
-
-barba.hooks.enter((data: any) => {});

@@ -1,10 +1,12 @@
-
-// npm i breakpoint-sass
-// @import "breakpoint-sass";
-
+// base/config should house css variables and other config
 @import "base/config";
+
+// base/page should house css for page elements (html, body, main, anything not specific to a single page)
 @import "base/page";
+
+//  base/normalize should house our css reset, a way to make browsers 'helpfulness' be less harmful
 @import "base/normalize";
 
+// Import all custom CSS files here
 
 
