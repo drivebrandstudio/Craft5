@@ -21,25 +21,21 @@ ___Tips/FAQ located at end of instructions___
       ```shell
          git clone git@github.com:drivebrandstudio/Craft4-Scaffolding.git ./
       ```
-   
+      </p>
+
+   <strong>OR</strong>
+   <p>
+      
       HTTPS:
    
       ```shell
       git clone https://github.com/drivebrandstudio/Craft4-Scaffolding.git ./
       ```
+   </p>
          
-      then **Make sure you replace the OWNER/REPOSITORY in the next script with your github repo link**
-   
-      ```shell
-      git remote set-url origin [https://github.com/OWNER/REPOSITORY.git]
-      ```
-      and make sure you're pointing to the correct spot with
-   
-      ```shell
-      git remote -v
-      ```
-      </p>
+     
    </details>
+   
    
    <details>
       <summary>
@@ -49,6 +45,17 @@ ___Tips/FAQ located at end of instructions___
          Create a github repo using the template and  clone that to your pc
       </p>
    </details>
+
+1.  **Make sure you replace the OWNER/REPOSITORY in the next script with your github repo link**
+   
+      ```shell
+      git remote set-url origin [https://github.com/OWNER/REPOSITORY.git]
+      ```
+      and make sure you're pointing to the correct spot with
+   
+      ```shell
+      git remote -v
+      ```
 
 1. **Add .env file**
 
