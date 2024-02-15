@@ -58,11 +58,21 @@ ___Tips/FAQ located at end of instructions___
       ```
 
 1. **Add .env file**
+1. **Add .env file**
+1. **Add .env file**
+1. **Add .env file**
+1. **Add .env file**
+1. **Add .env file**
+1. Did you add it?
+1. **Add .env file**
+1. **Add .env file**
+1. **Add .env file**
+1. **Add .env file**
 
 
 1. **Allow DDEV and makefile to configure the project**
    ```shell
-   make install
+   make dev
    ```
 
    This may take a few minutes. Let the terminal run. If nothing is happening after 5 minutes (which feels like a very long time...), try running
@@ -71,6 +81,7 @@ ___Tips/FAQ located at end of instructions___
    ddev poweroff
    ```
 
+1. **Run ddev exec php craft setup**
 3. **Update package.json, make this project truly your own :D**
 
     - [Project name](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
