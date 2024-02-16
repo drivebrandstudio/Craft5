@@ -1,9 +1,10 @@
 
 # Drive Brand Studio CraftCMS V4 template
+### Last reviewed 2/16/2024
 
 ## Repository Structure
-   `/.ddev/` — We utilize DDev to handle self-hosting of the dev environment. </br>
-   `/config/` — Craft config. This should be mostly left alone.    </br>
+   `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
+   `/config/` — CraftCMS config. This should be mostly left alone.    </br>
    `/src/` — Un-minified JS and CSS files </br>
    `/templates/` — Source code for our front-end, written in Twig. </br>
    `/web/` — the folder containing the generated minified documents for the website, as well as local assets (images, videos, etc) that are stored on the webserver (preferably, store them somewhere where storage is cheaper and make a network request to fetch I.E. put a video on youtube instead of in here)
@@ -33,10 +34,11 @@
 
 
 ## Requirements
-1. NodeJS version 14+, I recommend using [NVM]([https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)) if using Windows
-2. Ubuntu with all necessary php packages
-3. DDEV
-4. Docker
+1. NodeJS version 14+
+2. Ubuntu
+3. PHP 8.1+
+4. DDEV
+5. Docker
 
 ## Steps 
 1. Clone the scaffolding code **OR** use the scaffold to start a templated github repo:
