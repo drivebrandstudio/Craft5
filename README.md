@@ -33,14 +33,12 @@
 
 
 ## Requirements
-**I recommend following [DDEV's instructions](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/#wsl2-docker-desktop-install-script) on installing Ubuntu and Docker. Their docs are very detailed while not being too verbose**
 1. NodeJS version 14+, I recommend using [NVM]([https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)) if using Windows
 2. Ubuntu with all necessary php packages
 3. DDEV
 4. Docker
-5. An IDE ([VSCode](https://code.visualstudio.com/Download) or [PHPStorm](https://www.jetbrains.com/phpstorm/download/#section=windows) are my recomendations)
 
-## Steps to go from nothing locally -> Full-blown website
+## Steps 
 1. Clone the scaffolding code **OR** use the scaffold to start a templated github repo:
 
    <details>
@@ -75,21 +73,20 @@
 
 
 1. Add .env file
+3. Update package.json, make this project truly your own
+
+    - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
+    - author
+    - description
 1. Setup craft /config/ files
     ```shell
       ddev exec php craft setup
     ```
-3. **Update package.json, make this project truly your own :D**
-
-    - [Project name](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
-    - author
-    - description
-    - etc
-
-1. **Allow DDEV and makefile to configure the project**
+1. Allow DDEV and makefile to configure the project
    ```shell
    make dev
    ```
+   *If successful, your terminal should be taken over by the vite server. Split your terminal window, or open a new terminal to continue. Must leave Vite server running to view the local dev site*
    <details>
       <summary>Problem?</summary>
        This may take a few minutes. Let the terminal run.
@@ -106,7 +103,7 @@
    </details>
   
 
-5. **Allow DDEV to open the browser, so split your vscode terminal**
+5. Allow DDEV to open the browser, so split your vscode terminal
    ```shell
    ddev launch
    ```
