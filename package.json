@@ -29,8 +29,7 @@
     "sass": "^1.66.1",
     "vite": "^4.4.9",
     "vite-plugin-compression": "^0.3.6",
-    "vite-plugin-live-reload": "^2.1.0",
-       "@playwright/test": "^1.22.1"
+    "@playwright/test": "^1.22.1"
   },
   "dependencies": {
     "@barba/core": "^2.9.7",
@@ -39,7 +38,8 @@
     "gsap": "^3.8.0",
     "normalize-scss": "^7.0.1",
     "jquery": "^3.7.0",
-    "prettier-plugin-twig-melody": "^0.4.6"
+    "prettier-plugin-twig-melody": "^0.4.6",
+    "vite-plugin-restart": "^0.4.0"
   },
   "browserslist": {
     "production": [

@@ -1,4 +1,3 @@
-import liveReload from "vite-plugin-live-reload";
 import viteCompression from "vite-plugin-compression";
 
 export default ({ command }) => ({
@@ -23,5 +22,10 @@ export default ({ command }) => ({
     port: 3000,
     strictPort: true,
   },
-  plugins: [liveReload(["./templates/**/*", "./src/**/*"]), viteCompression()],
+  plugins: [
+    ViteRestart({
+      reload: ["./templates/**/*", "./src/**/*"],
+    }),
+    viteCompression()
+  ],
 });
