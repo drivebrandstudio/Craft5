@@ -11,7 +11,7 @@
 
 ## Contributor & Developer Resources & Guides
    - Docker to containerize shizz 🐳 — [Docker Installation](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/)
-   - DDEV to build our servers for us 🤓 — [DDEV Installation](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/#wsl2-docker-desktop-install-script)
+   - DDEV to build our Docker servers for us 🤓 — [DDEV Installation](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/#wsl2-docker-desktop-install-script)
    - Vite to bundle up our code ⚡ — [VITE](https://vitejs.dev/)
    - Twig as our templating engine 🏎️ — [Twig PHP](https://twig.symfony.com/doc/3.x/)
    - Sass — [SCSS](https://sass-lang.com/documentation/syntax/)
