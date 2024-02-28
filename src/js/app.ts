@@ -60,13 +60,16 @@ const genericTransition: ITransitionPage = {
 barba.init({
   // If we want to force a refresh on navigation, class='prevent-barba' on the element
   prevent: ({ el }) => el.classList && el.classList.contains("prevent-barba"),
+
   // When user hovers a link, Barba will try to fetch+cache that page in case the user navigates.
   // If there is a large list of links and the user hovers all of them quickly, this
   // can cause those links to fail
   prefetchIgnore: true,
+
+  // If trying to get a large page, ensure BarbaJS doest give up too early
   timeout: 5000,
   transitions: [
-    // Attempting to route to the same location breaks Barba. Ensure 
+    // When a user goes to the same route or just clicks an anchor link
     {
       name: "self",
     },
@@ -82,7 +85,7 @@ barba.init({
 });
 
 // When the site first loads, this code will run
-$(() => {});
+barba.hooks.once(() => { });
 
-// After any transition, instruct barba to rerun any JS over the newly painted elements
+// After any transition, rerun any JS over the newly rendered elements
 barba.hooks.enter(() => {});
