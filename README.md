@@ -125,3 +125,6 @@ Developer: reload window
 ```
 After the reload, let vscode finish loading and indexing, then attempt to use Prettier
 
+## Known pitfalls
+1. to be explored more.....
+
