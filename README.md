@@ -2,6 +2,8 @@
 # Drive Brand Studio CraftCMS V4 template
 ### Last reviewed 2/16/2024
 
+# If you run into any issues while following these steps, please make an issue against this Template Repo :D 
+
 ## Repository Structure
    `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
    `/config/` — CraftCMS config. This should be mostly left alone.    </br>
@@ -32,8 +34,8 @@
    - We have no linter yet 😬
    - Follow 'prior art' by referencing existing code within the codebase   
 
-
 ## Requirements
+1. Computer with MINIMUM 8gb RAM, modern OS (so Windows, Linux or Mac) 
 1. NodeJS version 14+
 2. Ubuntu
 3. PHP 8.1+
@@ -74,7 +76,7 @@
    </details>
 
 
-1. Add .env file
+1. Add empty .env file to the root of the project (next to .env.example)
 3. Update package.json, make this project truly your own
 
     - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
