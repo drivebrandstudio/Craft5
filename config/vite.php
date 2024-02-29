@@ -6,7 +6,7 @@ return [
     'useDevServer' => App::env('USE_VITE_DEV_SERVER'),
     'manifestPath' => '@webroot/dist/manifest.json',
     'devServerPublic' => App::env('PRIMARY_SITE_URL') . ':3000',
-    'serverPublic' => App::env('PRIMARY_SITE_URL') . '/dist/',
+    'serverPublic' => '/dist/',
     'errorEntry' => 'src/js/app.ts',
     'cacheKeySuffix' => '',
     'devServerInternal' => '',

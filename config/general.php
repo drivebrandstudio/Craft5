@@ -1,5 +1,4 @@
 <?php
-
 /**
  * General Configuration
  *
@@ -9,38 +8,25 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\config\GeneralConfig;
 use craft\helpers\App;
 
-$isDev = App::env('CRAFT_ENVIRONMENT') == 'dev';
-$isProd = App::env('CRAFT_ENVIRONMENT') == 'production';
-
-return [
-    // Default Week Start Day (0 = Sunday, 1 = Monday...)
-    'defaultWeekStartDay' => 1,
-
-    // Whether generated URLs should omit "index.php"
-    'omitScriptNameInUrls' => true,
-
-    // Whether Dev Mode should be enabled (see https://craftcms.com/guides/what-dev-mode-does)
-    'devMode' => $isDev,
-
-    // Whether administrative changes should be allowed
-    'allowAdminChanges' => $isDev,
-
-    // Whether crawlers should be allowed to index pages and following links
-    'disallowRobots' => !$isProd,
-
-    // https://craftcms.com/docs/3.x/config/config-settings.html#limitautoslugstoascii
-    'limitAutoSlugsToAscii' => true,
-
-    // https://craftcms.com/docs/3.x/config/config-settings.html#convertfilenamestoascii
-    'convertFilenamesToAscii' => true,
-
-    // https://craftcms.com/docs/3.x/config/#aliases
-    'aliases' => [
-        '@web' => rtrim(App::env('PRIMARY_SITE_URL'), '/'),
+return GeneralConfig::create()
+    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
+    ->defaultWeekStartDay(0)
+    // Prevent generated URLs from including "index.php"
+    ->omitScriptNameInUrls()
+    // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+    ->devMode(App::env('CRAFT_ENVIRONMENT') ?? false)
+    // Preload Single entries as Twig variables
+    ->preloadSingles()
+    // Allow administrative changes
+    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
+    // Disallow robots
+    ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+    // Prevent user enumeration attacks
+    ->preventUserEnumeration()
+    // Set the @webroot alias so the clear-caches command knows where to find CP resources
+    ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
-    ]
-    ,
-    'sendPoweredByHeader' => false
-];
+    ]);
