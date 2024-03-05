@@ -47,8 +47,8 @@
             │   │   ├── .....
             │   ├── base.twig
             │   └── ....
-            ├── error.twig
-            └── index.twig
+            ├── error.twig  -- Craft Error Boundary
+            └── index.twig  -- App entry point
         </pre>
         Aligning Designers and Developers is a good way to make groovy stuff quickly :D
    - Prettier works (most of the time), so format on save
