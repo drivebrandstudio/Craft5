@@ -31,7 +31,7 @@
 ## Style Guide
    - DBS Twig template folder structuring is inspired by the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/). We rename these primatives to fit into the CraftCMS /templates/ folder structer of:
         <pre>
-            .
+            templates
             ├── 404.twig
             ├── _components  -- ATOMS
             ├── _includes   -- MOLECULES
