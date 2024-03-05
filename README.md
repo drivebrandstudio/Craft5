@@ -29,7 +29,28 @@
 
 
 ## Style Guide
-   - DBS Twig template folder structuring is inspired by the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/).
+   - DBS Twig template folder structuring is inspired by the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/). We rename these primatives to fit into the CraftCMS /templates/ folder structer of:
+        <pre>
+            .
+            ├── 404.twig
+            ├── _components  -- ATOMS
+            ├── _includes   -- MOLECULES
+            │   ├── background.twig
+            │   ├── bodyEnd.twig
+            │   ├── footer.twig
+            │   ├── head.twig
+            │   ├── header.twig
+            │   └── socials.twig
+            ├── _layouts   -- TEMPLATES/PAGES
+            │   ├── _entrytype
+            │   │   ├── [some_entry_type].twig
+            │   │   ├── .....
+            │   ├── base.twig
+            │   └── ....
+            ├── error.twig
+            └── index.twig
+        </pre>
+        Aligning Designers and Developers is a good way to make groovy stuff quickly :D
    - Prettier works (most of the time), so format on save
    - We have no linter yet 😬
    - Follow 'prior art' by referencing existing code within the codebase   
