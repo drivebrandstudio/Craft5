@@ -20,8 +20,7 @@ setup:
 	ddev exec php craft plugin/install redactor
 	ddev exec php craft plugin/install vite
 	ddev exec npm run build
-	@echo "ready to take off 🎉🎉🎉"
-	@echo "type 'make dev' to  run vite development server"
+	ddev exec npm run dev
 install: up build
 	ddev exec php craft setup/app-id \
 		$(filter-out $@,$(MAKECMDGOALS))
