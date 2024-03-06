@@ -98,6 +98,7 @@
 
 
 1. Add empty .env file to the root of the project (next to .env.example)
+2. Change .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
 3. Update package.json, make this project truly your own
 
     - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
