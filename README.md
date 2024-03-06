@@ -98,33 +98,33 @@
 
 
 1. Add empty .env file to the root of the project (next to .env.example)
-2. Change .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
+2. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
 3. Update package.json, make this project truly your own
 
     - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
     - author
     - description
-1. Setup craft /config/ files
-    ```shell
-      ddev exec php craft setup
-    ```
-1. Allow DDEV and makefile to configure the project
-   ```shell
-   make dev
-   ```
+1. Configure the project with DDEV
+     ```shell
+     make setup
+     ```
+1. Run the project with
+     ```shell
+      make dev
+     ```
    *If successful, your terminal should be taken over by the vite server. Split your terminal window, or open a new terminal to continue. Must leave Vite server running to view the local dev site*
    <details>
       <summary>Problem?</summary>
        This may take a few minutes. Let the terminal run.
 
-   If nothing is happening after 5 minutes (which feels like a very long time...), try running
+   If nothing is happening after 5 minutes (which feels like a very long time...), CTRL+C in the terminal that is locked up, then try running
 
    ```shell
    ddev poweroff
    ```
    and re-running
       ```shell
-   make dev
+   make setup
    ```
    </details>
   
@@ -134,9 +134,7 @@
    ddev launch
    ```
 
-6. **Navigate to <https://{the-project-name}.ddev.site/admin>**
-
-   If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
+6. Navigate to /admin in the new web browser. If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
 
 ## FAQ/Tips
 ### Errors during install
