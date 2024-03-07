@@ -1,7 +1,6 @@
 // LIBRARY IMPORTS
 import barba, { ITransitionPage } from "@barba/core";
 import { gsap } from "gsap";
-import $ from "jquery";
 
 // CUSTOM CODE IMPORTS
 
@@ -12,6 +11,9 @@ import $ from "jquery";
 
 // Default page fade transition
 const genericTransition: ITransitionPage = {
+  // When the site first loads, this code will run
+  // Can this ever run during the 'self' transition?
+  once(data: any) { },
   // Before current component leaves, set next to not take up dom space
   before(data: any) {
     gsap.set(data.next.container, {
@@ -84,8 +86,6 @@ barba.init({
   ],
 });
 
-// When the site first loads, this code will run
-barba.hooks.once(() => { });
 
 // After any transition, rerun any JS over the newly rendered elements
-barba.hooks.enter(() => {});
+barba.hooks.after((data: any) => { });
