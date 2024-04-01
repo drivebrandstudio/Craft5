@@ -1,9 +1,13 @@
 
 # Drive Brand Studio CraftCMS V4 template
-### Last reviewed 3/6/2024
+### Last reviewed 4/1/2024
+### Check out the 'with-tailwind' branch for muuuuuch more than just tailwind! (React frontend, aceternity components, graphQL for middleware, still using Craftcms)
 
 # If you run into any issues while following these steps, please make an issue against this Template Repo :D 
 
+## Front and Back ends
+   - Front end in twig
+   - Back end in CraftCMS
 ## Repository Structure
    `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
    `/config/` — CraftCMS config. This should be mostly left alone.    </br>
