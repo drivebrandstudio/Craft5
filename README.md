@@ -1,5 +1,5 @@
 
-# Drive Brand Studio CraftCMS V4 template
+# Drive Brand Studio CraftCMS V5 template
 ### Last reviewed 4/1/2024
 ### Check out the 'with-tailwind' branch for muuuuuch more than just tailwind! (React frontend, aceternity components, graphQL for middleware, still using Craftcms)
 
