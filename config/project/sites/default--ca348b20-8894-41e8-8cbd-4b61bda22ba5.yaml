@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Craft4 Scaffolding Ddev'
+name: 'Craft 5caffold'
 primary: true
-siteGroup: cc5695ce-fe88-4b1b-a774-d1d2d549da00 # Craft4 Scaffolding Ddev
+siteGroup: c077d9b1-5981-44d3-9ec9-77ddb889340c # Scaffold
 sortOrder: 1

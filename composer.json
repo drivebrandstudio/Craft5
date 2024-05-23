@@ -1,11 +1,10 @@
 {
 	"require": {
-		"craftcms/cms": "4.6.0",
-		"craftcms/redactor": "^3.0",
-		"ether/seo": "4.1.1",
-		"nystudio107/craft-vite": "4.0.7",
-		"putyourlightson/craft-sherlock": "4.2.0",
-		"shornuk/craft-plausible": "2.0.0",
+		"craftcms/ckeditor": "4.0.6",
+		"craftcms/cms": "^5.0.0",
+		"ether/seo": "v5.0.0-rc2",
+		"nystudio107/craft-vite": "^5.0",
+		"shornuk/craft-plausible": "3.0.0",
 		"vlucas/phpdotenv": "^5.4.0"
 	},
 	"require-dev": {
@@ -26,7 +25,7 @@
 		"sort-packages": true,
 		"optimize-autoloader": true,
 		"platform": {
-			"php": "8.0.2"
+			"php": "8.2"
 		}
 	},
 	"minimum-stability": "dev",
@@ -52,5 +51,12 @@
 		"pre-install-cmd": "@pre-craft-update",
 		"post-update-cmd": "@post-craft-update",
 		"post-install-cmd": "@post-craft-update"
-	}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://composer.craftcms.com",
+			"canonical": false
+		}
+	]
 }
