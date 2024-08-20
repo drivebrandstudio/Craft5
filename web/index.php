@@ -5,6 +5,7 @@
 
 // Load shared bootstrap
 require dirname(__DIR__) . '/bootstrap.php';
+define('CRAFT_CP', true);
 
 // Load and run Craft
 /** @var craft\web\Application $app */

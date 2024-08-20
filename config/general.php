@@ -19,6 +19,9 @@ return GeneralConfig::create()
     ->defaultWeekStartDay(0)
     // Prevent generated URLs from including "index.php"
     ->omitScriptNameInUrls()
+    ->headlessMode(true)
+    ->cpTrigger(null)
+    ->baseCpUrl(App::env('PRIMARY_SITE_URL'))
     // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
     ->devMode($isDev)
     // Preload Single entries as Twig variables
