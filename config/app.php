@@ -18,11 +18,9 @@
  */
 
 use craft\helpers\App;
+use modules\revalidate\Revalidate;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
-    'modules' => [
-        'my-module' => \modules\Module::class,
-    ],
-    //'bootstrap' => ['my-module'],
+    'modules' => ['revalidate' => Revalidate::class], 'bootstrap' => ['revalidate'],
 ];
