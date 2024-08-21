@@ -34,83 +34,31 @@
 5. Docker
 
 ## Steps 
-1. Clone the scaffolding code **OR** use the scaffold to start a templated github repo:
-
-   <details>
-      <summary>Creating folder on local computer</summary>
-      <p>
-      SSH (preferred):
-      
-      ```shell
-         git clone git@github.com:drivebrandstudio/Craft4-Scaffolding.git ./
-      ```
-      </p>
-
-   <strong>OR</strong>
-   <p>
-      
-      HTTPS:
-   
-      ```shell
-      git clone https://github.com/drivebrandstudio/Craft4-Scaffolding.git ./
-      ```
-   </p>
-   </details>
-   
-   <details>
-      <summary>
-         Templated github repo 
-      </summary>
-      <p>
-         Create a github repo using the template and  clone that to your pc
-      </p>
-   </details>
-
-
 1. Add empty .env file to the root of the project (next to .env.example)
-2. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
-3. Update package.json, make this project truly your own
-
-     <details>
-     <summary>Possible changes</summary>
-       
-       - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
-       - author
-       - description
-     </details>
-
+2. Add `CRAFT_ENVIRONMENT=dev` and `# NODE_TLS_REJECT_UNAUTHORIZED=0 # For local developement` to the .env file
+3. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
 1. Configure the project
      ```shell
-     make setup
+     ddev config
      ```
-1. Update .env by adding
-     `CRAFT_ENVIRONMENT=dev`
-1. Run the project
-     ```shell
-      make dev
-     ```
-   *If successful, your terminal should be taken over by the vite server. Split your terminal window, or open a new terminal to continue. Must leave Vite server running to view the local dev site*
-   <details>
-      <summary>Problem?</summary>
-       This may take a few minutes. Let the terminal run.
-
-   If nothing is happening after 5 minutes (which feels like a very long time...), CTRL+C in the terminal that is locked up, then try running
-
+1. Start the DB and Web servers 
    ```shell
-   ddev poweroff
-   ```
-   and re-running
-      ```shell
-   make setup
-   ```
-   </details>
-  
+     ddev start
+     ```
+1. Install necessary packages
+   ```shell
+     composer install
+     ```
 
+5. Install CraftCMS
+   ```shell
+   ddev exec php craft setup
+   ```
 5. Allow DDEV to open the browser, so split your vscode terminal
    ```shell
    ddev launch
    ```
-8. Navigate to `/admin` within your browser. In the GraphQL tab, select Schemas and in the Private Schema, select all.
+8. In the GraphQL tab, select Schemas and in the Private Schema, select all.
 9. Then, select the Tokens tab and create a new token. Name it something like 'Private'.
 10. Copy that token and paste it into L57 in index.tsx for `Authorization: "Bearer [PUT_IT_HERE]"`. When you copy with CraftCMS's copy button, you get the whole line. You only need the token value after `Bearer`.
 
