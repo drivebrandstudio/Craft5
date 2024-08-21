@@ -46,6 +46,7 @@
      ```shell
      ddev start
      ```
+1. Add `CGIPassAuth On` to .ddev > apache > apache-site.conf after L7
 5. Install necessary packages
    ```shell
    composer install
