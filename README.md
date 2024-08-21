@@ -3,7 +3,7 @@
 
 # Drive Brand Studio CraftCMS v5 template
 
-### ⚠️ DDEV blocks headers so local development is broken currently ⚠️
+### ⚠️ DDEV blocks headers so local integration with NextJS frontend is broken ⚠️
 
 ### Features
 - Live preview
