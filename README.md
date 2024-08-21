@@ -34,31 +34,31 @@
 5. Docker
 
 ## Steps 
+1. Use the scaffold to start a templated github repo
 1. Add empty .env file to the root of the project (next to .env.example)
-2. Add `CRAFT_ENVIRONMENT=dev` and `# NODE_TLS_REJECT_UNAUTHORIZED=0 # For local developement` to the .env file
-3. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
+1. Add CRAFT_ENVIRONMENT=dev
+2. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
 1. Configure the project
      ```shell
      ddev config
      ```
-1. Start the DB and Web servers 
-   ```shell
+1. Start the DB server
+     ```shell
      ddev start
      ```
-1. Install necessary packages
+5. Install necessary packages
    ```shell
-     composer install
-     ```
-
-5. Install CraftCMS
+   composer install
+   ```
+5. Install craft
    ```shell
    ddev exec php craft setup
    ```
-5. Allow DDEV to open the browser, so split your vscode terminal
+5. Configure craft
    ```shell
    ddev launch
    ```
-8. In the GraphQL tab, select Schemas and in the Private Schema, select all.
+8. In the GraphQL tab, select Schemas and in the Private Schema, select all checkboxes.
 9. Then, select the Tokens tab and create a new token. Name it something like 'Private'.
 10. Copy that token and paste it into L57 in index.tsx for `Authorization: "Bearer [PUT_IT_HERE]"`. When you copy with CraftCMS's copy button, you get the whole line. You only need the token value after `Bearer`.
 
