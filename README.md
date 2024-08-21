@@ -1,26 +1,25 @@
 
-# Drive Brand Studio CraftCMS V5 template
-### Last reviewed 4/1/2024
-### Check out the 'with-tailwind' branch for muuuuuch more than just tailwind! (React frontend, aceternity components, graphQL for middleware, still using Craftcms)
+##### Last reviewed 8/21/2024
 
-# If you run into any issues while following these steps, please make an issue against this Template Repo :D 
+# Drive Brand Studio CraftCMS v5 template
 
-## Front and Back ends
-   - Front end in NextJS through [the ui template](https://github.com/drivebrandstudio/Craft5-UI)
-   - Back end in CraftCMS
-## Repository Structure
-   `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
-   `/config/` — CraftCMS config. This should be mostly left alone.    </br>
-   `/modules/` — CraftCMS custom functionality    </br>
-   `/web/` — the folder containing the generated minified documents for the website, as well as local assets (images, videos, etc) that are stored on the webserver (preferably, store them somewhere where storage is cheaper and make a network request to fetch I.E. put a video on youtube instead of in here)
-
-## Contributor & Developer Resources & Guides
+### Contributor & Developer Resources & Guides
    - Docker to containerize shizz 🐳 — [Docker Installation](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/)
    - DDEV to build our Docker servers for us 🤓 — [DDEV Installation](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/#wsl2-docker-desktop-install-script)
+   - Vite to bundle up our code ⚡ — [VITE](https://vitejs.dev/)
+   - Twig as our templating engine 🏎️ — [Twig PHP](https://twig.symfony.com/doc/3.x/)
+   - Sass — [SCSS](https://sass-lang.com/documentation/syntax/)
+   - Javascript 🤮 — [Mozilla's Excellent JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+   - NPM for managing Node packages 📦 — [NPM](https://docs.npmjs.com/cli/v9)
    - Composer to manage php packages 🎼 — [Composer](https://getcomposer.org/doc/)
+   - MakeFile for easily running bulk scripts 🚚 — [MakeFile](https://www.gnu.org/software/make/manual/make.html)
    - CraftCMS for managing content 📝 — [CraftCMS](https://craftcms.com/docs/)
    - .env 🦺 — [.env](https://www.dotenv.org/docs)
-   - Node +v18, I recommend using NVM to install and manage — [NVM]([https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
+   - Prettier... But be warned 🧹 — [prettier](https://prettier.io/)
+   - Prettier Plugin by Melody  — [prettier-plugin-twig-melody](https://github.com/trivago/prettier-plugin-twig-melody?tab=readme-ov-file#install)
+   - Node V14+, I recommend using NVM to install and manage — [NVM]([https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
+   - React
+   - GraphQL
 
 ## Requirements
 1. Computer with MINIMUM 8gb RAM, modern OS (so Windows, Linux or Mac) 
@@ -68,14 +67,21 @@
 2. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
 3. Update package.json, make this project truly your own
 
-    - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
-    - author
-    - description
-1. Configure the project with DDEV
+     <details>
+     <summary>Possible changes</summary>
+       
+       - Project name — must adhere to the [rules of npm](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name)
+       - author
+       - description
+     </details>
+
+1. Configure the project
      ```shell
      make setup
      ```
-1. Run the project with
+1. Update .env by adding
+     `CRAFT_ENVIRONMENT=dev`
+1. Run the project
      ```shell
       make dev
      ```
@@ -100,8 +106,44 @@
    ```shell
    ddev launch
    ```
+8. Navigate to `/admin` within your browser. In the GraphQL tab, select Schemas and in the Private Schema, select all.
+9. Then, select the Tokens tab and create a new token. Name it something like 'Private'.
+10. Copy that token and paste it into L57 in index.tsx for `Authorization: "Bearer [PUT_IT_HERE]"`. When you copy with CraftCMS's copy button, you get the whole line. You only need the token value after `Bearer`.
 
-6. Navigate to /admin in the new web browser. If you land on a page with server errors or an if(!hasCraftInstalled) then you are on the right track. Now check your .htaccess file and .env (make sure you have your database hooked into ddev correctly)
+## Repository Structure
+   `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
+   `/config/` — CraftCMS config. This should be mostly left alone.    </br>
+   `/src/` — Un-minified JS, JSX and SCSS files </br>
+   `/templates/` — Source code for our front-end, written in Twig. </br>
+   `/web/` — the folder containing the generated minified documents for the website, as well as local assets (images, videos, etc) that are stored on the webserver (preferably, store them somewhere where storage is cheaper and make a network request to fetch I.E. put a video on youtube instead of in here)
+
+   
+### Style Guide
+   - DBS Twig template folder structuring is inspired by the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/). We rename these primatives to fit into the CraftCMS /templates/ folder structer of:
+        <pre>
+            templates
+            ├── 404.twig
+            ├── _components  -- ATOMS
+            ├── _includes   -- MOLECULES
+            │   ├── background.twig
+            │   ├── bodyEnd.twig
+            │   ├── footer.twig
+            │   ├── head.twig
+            │   ├── header.twig
+            │   └── socials.twig
+            ├── _layouts   -- TEMPLATES/PAGES
+            │   ├── _entrytype
+            │   │   ├── [some_entry_type].twig
+            │   │   ├── .....
+            │   ├── base.twig
+            │   └── ....
+            ├── error.twig  -- Craft Error Boundary
+            └── index.twig  -- App entry point
+        </pre>
+        Aligning Designers and Developers is a good way to make groovy stuff quickly :D
+   - Prettier works (most of the time), so format on save
+   - We have no linter yet 😬
+   - Follow 'prior art' by referencing existing code within the codebase   
 
 ## FAQ/Tips
 ### Errors during install
