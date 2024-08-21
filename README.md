@@ -3,6 +3,10 @@
 
 # Drive Brand Studio CraftCMS v5 template
 
+### Features
+- Live preview
+- Revalidate Front End data on save in CraftCMS
+
 ### Contributor & Developer Resources & Guides
    - Docker to containerize shizz 🐳 — [Docker Installation](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/)
    - DDEV to build our Docker servers for us 🤓 — [DDEV Installation](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/#wsl2-docker-desktop-install-script)
