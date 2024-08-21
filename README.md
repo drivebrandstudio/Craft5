@@ -3,8 +3,6 @@
 
 # Drive Brand Studio CraftCMS v5 template
 
-### ⚠️ DDEV blocks headers so local integration with NextJS frontend is broken ⚠️
-
 ### Features
 - Live preview
 - Revalidate Front End data on save in CraftCMS
@@ -50,7 +48,7 @@
      ```
 1. In .ddev > apache > apache-site.conf
    2. Delete `#DDEV-generated`
-   2. Add `CGIPassAuth On` to .ddev > apache > apache-site.conf after L7
+   2. Copy contents of .htaccess_dev and paste outside of the <VirtualHost> tags
 5. Install necessary packages
    ```shell
    composer install
