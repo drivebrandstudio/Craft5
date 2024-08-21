@@ -58,8 +58,8 @@
 ## Repository Structure
    `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
    `/config/` — CraftCMS config. This should be mostly left alone.    </br>
-   `/web/` — the folder containing the generated minified documents for the website, as well as local assets (images, videos, etc) that are stored on the webserver (preferably, store them somewhere where storage is cheaper and make a network request to fetch I.E. put a video on youtube instead of in here)
-   `/modules/` — Custom CraftCMS logic (contains Revalidation)
+   `/web/` — Generated minified documents for the website, as well as local assets  <br />
+    `/modules/` — Custom CraftCMS logic (contains Revalidation)
 ## FAQ/Tips
 ### Errors during install
 1. Follow the DDEV instructions slowly and carefully. Read each line all the way through, it's faster than skimming and hitting an error and having to debug...
