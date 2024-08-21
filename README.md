@@ -3,6 +3,8 @@
 
 # Drive Brand Studio CraftCMS v5 template
 
+### ⚠️ DDEV blocks headers so local development is broken currently ⚠️
+
 ### Features
 - Live preview
 - Revalidate Front End data on save in CraftCMS
@@ -46,7 +48,9 @@
      ```shell
      ddev start
      ```
-1. Add `CGIPassAuth On` to .ddev > apache > apache-site.conf after L7
+1. In .ddev > apache > apache-site.conf
+   2. Delete `#DDEV-generated`
+   2. Add `CGIPassAuth On` to .ddev > apache > apache-site.conf after L7
 5. Install necessary packages
    ```shell
    composer install
