@@ -19,8 +19,11 @@ return GeneralConfig::create()
     ->defaultWeekStartDay(0)
     // Prevent generated URLs from including "index.php"
     ->omitScriptNameInUrls()
+    // Remove frontend from Twig
     ->headlessMode(true)
+    // Set Control Panel url to the route of the app step 1
     ->cpTrigger(null)
+    // Set Control Panel url to the route of the app step 2
     ->baseCpUrl(App::env('PRIMARY_SITE_URL'))
     // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
     ->devMode($isDev)

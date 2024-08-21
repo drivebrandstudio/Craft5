@@ -5,6 +5,8 @@
 
 // Load shared bootstrap
 require dirname(__DIR__) . '/bootstrap.php';
+
+// Headless mode define control panel route while allowing NextJS graphql/api route to work
 define('CRAFT_CP', $_SERVER['REQUEST_URI'] !== '/api');
 
 
