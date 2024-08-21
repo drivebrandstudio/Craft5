@@ -10,24 +10,14 @@
 ### Contributor & Developer Resources & Guides
    - Docker to containerize shizz 🐳 — [Docker Installation](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/)
    - DDEV to build our Docker servers for us 🤓 — [DDEV Installation](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/#wsl2-docker-desktop-install-script)
-   - Vite to bundle up our code ⚡ — [VITE](https://vitejs.dev/)
-   - Twig as our templating engine 🏎️ — [Twig PHP](https://twig.symfony.com/doc/3.x/)
-   - Sass — [SCSS](https://sass-lang.com/documentation/syntax/)
-   - Javascript 🤮 — [Mozilla's Excellent JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-   - NPM for managing Node packages 📦 — [NPM](https://docs.npmjs.com/cli/v9)
    - Composer to manage php packages 🎼 — [Composer](https://getcomposer.org/doc/)
-   - MakeFile for easily running bulk scripts 🚚 — [MakeFile](https://www.gnu.org/software/make/manual/make.html)
    - CraftCMS for managing content 📝 — [CraftCMS](https://craftcms.com/docs/)
    - .env 🦺 — [.env](https://www.dotenv.org/docs)
-   - Prettier... But be warned 🧹 — [prettier](https://prettier.io/)
-   - Prettier Plugin by Melody  — [prettier-plugin-twig-melody](https://github.com/trivago/prettier-plugin-twig-melody?tab=readme-ov-file#install)
-   - Node V14+, I recommend using NVM to install and manage — [NVM]([https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
-   - React
-   - GraphQL
+   - Node V18+, I recommend using NVM to install and manage — [NVM]([https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
 
 ## Requirements
 1. Computer with MINIMUM 8gb RAM, modern OS (so Windows, Linux or Mac) 
-1. NodeJS version 14+
+1. NodeJS version 18+
 2. Ubuntu
 3. PHP 8.1+
 4. DDEV
