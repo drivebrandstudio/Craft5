@@ -58,38 +58,8 @@
 ## Repository Structure
    `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
    `/config/` — CraftCMS config. This should be mostly left alone.    </br>
-   `/src/` — Un-minified JS, JSX and SCSS files </br>
-   `/templates/` — Source code for our front-end, written in Twig. </br>
    `/web/` — the folder containing the generated minified documents for the website, as well as local assets (images, videos, etc) that are stored on the webserver (preferably, store them somewhere where storage is cheaper and make a network request to fetch I.E. put a video on youtube instead of in here)
-
-   
-### Style Guide
-   - DBS Twig template folder structuring is inspired by the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/). We rename these primatives to fit into the CraftCMS /templates/ folder structer of:
-        <pre>
-            templates
-            ├── 404.twig
-            ├── _components  -- ATOMS
-            ├── _includes   -- MOLECULES
-            │   ├── background.twig
-            │   ├── bodyEnd.twig
-            │   ├── footer.twig
-            │   ├── head.twig
-            │   ├── header.twig
-            │   └── socials.twig
-            ├── _layouts   -- TEMPLATES/PAGES
-            │   ├── _entrytype
-            │   │   ├── [some_entry_type].twig
-            │   │   ├── .....
-            │   ├── base.twig
-            │   └── ....
-            ├── error.twig  -- Craft Error Boundary
-            └── index.twig  -- App entry point
-        </pre>
-        Aligning Designers and Developers is a good way to make groovy stuff quickly :D
-   - Prettier works (most of the time), so format on save
-   - We have no linter yet 😬
-   - Follow 'prior art' by referencing existing code within the codebase   
-
+   `/modules/` — Custom CraftCMS logic (contains Revalidation)
 ## FAQ/Tips
 ### Errors during install
 1. Follow the DDEV instructions slowly and carefully. Read each line all the way through, it's faster than skimming and hitting an error and having to debug...
