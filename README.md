@@ -41,11 +41,11 @@
    2. Copy contents of .htaccess_dev and paste outside of the <VirtualHost> tags
 5. Install necessary packages
    ```shell
-   composer install
+   ddev composer install
    ```
 5. Install craft
    ```shell
-   ddev exec php craft setup
+   ddev craft setup
    ```
 5. Configure craft
    ```shell
