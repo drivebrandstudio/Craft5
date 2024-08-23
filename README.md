@@ -2,6 +2,8 @@
 ##### Last reviewed 8/21/2024
 
 # Drive Brand Studio CraftCMS v5 template
+### Acknowledgments
+- https://github.com/CreateSean/craft-starter
 
 ### Features
 - Live preview
