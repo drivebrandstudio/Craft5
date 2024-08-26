@@ -58,6 +58,10 @@
 10. Copy that token and paste it into L57 in index.tsx for `Authorization: "Bearer [PUT_IT_HERE]"`. When you copy with CraftCMS's copy button, you get the whole line. You only need the token value after `Bearer`.
 11. Create a FileSystem for asset uploads and Assets, but make sure to name the path ANYTHING OTHER THAN ASSETS
        1. `(For example, if you have an assets/ folder, that would conflict with the /assets page in the control panel.)`
+          ![image](https://github.com/user-attachments/assets/6f1f6579-442e-4213-8a35-cb1dc88b1707)
+          ![image](https://github.com/user-attachments/assets/509fcf48-d478-4733-90ce-eddabd093cd1)
+
+
 
 ## Repository Structure
    `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
@@ -75,6 +79,22 @@ Developer: reload window
 ```
 After the reload, let vscode finish loading and indexing, then attempt to use Prettier
 
-## Known pitfalls
-1. to be explored more.....
+## UI_examples (🚧WIP🚧)
+
+
+https://github.com/user-attachments/assets/30656964-2cac-489b-8ebc-cc7ead9004f3
+
+
+
+https://github.com/user-attachments/assets/f2805740-c5f0-435b-9631-d7ad30f0a8cf
+
+
+
+
+https://github.com/user-attachments/assets/859457e9-3a93-4929-a7ff-e2a5510fbd72
+
+
+
+https://github.com/user-attachments/assets/5214eb78-a1ff-451f-89ca-d7069f1b7c9c
+
 
