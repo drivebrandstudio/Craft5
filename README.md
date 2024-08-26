@@ -56,6 +56,8 @@
 8. In the GraphQL tab, select Schemas and in the Private Schema, select all checkboxes.
 9. Then, select the Tokens tab and create a new token. Name it something like 'Private'.
 10. Copy that token and paste it into L57 in index.tsx for `Authorization: "Bearer [PUT_IT_HERE]"`. When you copy with CraftCMS's copy button, you get the whole line. You only need the token value after `Bearer`.
+11. Create a FileSystem for asset uploads and Assets, but make sure to name the path ANYTHING OTHER THAN ASSETS
+       1. `(For example, if you have an assets/ folder, that would conflict with the /assets page in the control panel.)`
 
 ## Repository Structure
    `/.ddev/` — We utilize DDEV to handle self-hosting of the dev environment. </br>
