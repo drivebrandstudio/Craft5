@@ -7,7 +7,7 @@ storage
 node_modules/
 /vendor
 /web/cpresources
-/web/assets
+/web/public
 /web/.htaccess
 /web/dist
 

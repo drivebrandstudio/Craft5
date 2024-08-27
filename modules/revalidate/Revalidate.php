@@ -53,6 +53,7 @@ class RevalidateJob extends BaseJob
     public function execute($queue): void
     {
         $client = new Client();
+        // TODO STARTUP: Swap this URL and secret for your site 
         $url = 'https://www.[REPLACE_your_website]/api/revalidate?uri=';
 
         $url .= urlencode($this->uri);
