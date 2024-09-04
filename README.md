@@ -47,7 +47,7 @@
    ```
 5. Install craft
    ```shell
-   ddev craft setup
+   ddev --import-db --file=starter.sql.gz
    ```
 5. Configure craft
    ```shell
