@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: articleContent
+instructions: null
+name: 'Article Content'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - 7c0dae6e-f903-4671-869a-4b207ce5f4f4 # Subhead
+    - b9f9ee47-0657-457a-b3e2-adf8f45280fc # Text
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

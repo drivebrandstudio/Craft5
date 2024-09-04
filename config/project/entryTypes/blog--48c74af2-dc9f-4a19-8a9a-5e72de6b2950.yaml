@@ -1,0 +1,131 @@
+color: null
+fieldLayouts:
+  bf9ebec4-a500-4811-8e57-7a76e355da50:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-30T13:23:17+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 741c3acb-9eba-4299-b353-4d89288cc6c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-04T19:39:22+00:00'
+            elementCondition: null
+            fieldUid: cca50fd5-eae7-46d1-a534-225f1a1dd71d # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be32a40f-0223-4e72-b127-daba7fef164c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-30T13:27:04+00:00'
+            elementCondition: null
+            fieldUid: 2dc0eec0-8212-489c-92c3-5ef43da4bf6f # Summary
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b247bec1-e40a-4d2b-a7e9-ae3be987fa0f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-30T13:27:04+00:00'
+            elementCondition: null
+            fieldUid: 177c74bc-bb8e-490b-b0f8-3cc4515e7af0 # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6454f755-a0a7-4507-8fba-9a8abf925407
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-30T13:27:04+00:00'
+            elementCondition: null
+            fieldUid: 2aadf49b-1991-42e6-b44a-67b81ca12c34 # Thumbnail
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d800e333-e30d-40ad-b909-a6207c830501
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-30T13:42:40+00:00'
+            elementCondition: null
+            fieldUid: b933d220-df03-410e-a4cc-dc86a74d19c9 # Article Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a029caf8-e5d2-46d0-92e6-24e8105b4006
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 00d132d0-ba49-497d-a6b1-961e3543a389
+        userCondition: null
+handle: blog
+hasTitleField: true
+icon: ''
+name: Blog
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

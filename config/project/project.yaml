@@ -1,14 +1,37 @@
-dateModified: 1716496971
+dateModified: 1725478762
 email:
   fromEmail: daniel@drivebrandstudio.com
-  fromName: 'Craft4 Scaffolding Ddev'
+  fromName: 'Craft 5caffold'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  public:
+    hasUrls: true
+    name: Public
+    settings:
+      path: public/images
+    type: craft\fs\Local
+    url: '@web/public/images'
 meta:
   __names__:
-    32eb0902-1a41-4ecb-b4c0-ff3a96227ce5: 'Public Schema' # Public Schema
-    b6f13d27-cb84-462b-9198-5f2a63bef74d: Simple # Simple
-    c077d9b1-5981-44d3-9ec9-77ddb889340c: Scaffold # Scaffold
-    ca348b20-8894-41e8-8cbd-4b61bda22ba5: 'Craft 5caffold' # Craft 5caffold
+    2aadf49b-1991-42e6-b44a-67b81ca12c34: Thumbnail # Thumbnail
+    2dc0eec0-8212-489c-92c3-5ef43da4bf6f: Summary # Summary
+    2eb36cc0-a60a-4071-a815-ce808da649b2: 'Craft 5caffold' # Craft 5caffold
+    3eed0c77-3b75-46cd-8e31-351f3c83f416: Home # Home
+    4f44f246-357b-4552-a587-38f11cd9d378: Images # Images
+    7c0dae6e-f903-4671-869a-4b207ce5f4f4: Subhead # Subhead
+    48c74af2-dc9f-4a19-8a9a-5e72de6b2950: Blog # Blog
+    177c74bc-bb8e-490b-b0f8-3cc4515e7af0: Date # Date
+    663ae8bc-bf43-4af2-9213-eb15474f28c0: Home # Home
+    871e17fd-93c5-4f99-b004-ebbd5303689b: 'Article Text' # Article Text
+    8618e083-7911-4332-a599-d8c6a8884ed8: Images # Images
+    5583777d-063b-4622-92c6-694683de9212: Blog # Blog
+    a033033c-2320-4124-996c-2e6e2c1b2869: 'Craft 5caffold' # Craft 5caffold
+    a4cb822f-b5b3-45c4-ba2c-2a4743e275e7: Private # Private
+    b9f9ee47-0657-457a-b3e2-adf8f45280fc: Text # Text
+    b933d220-df03-410e-a4cc-dc86a74d19c9: 'Article Content' # Article Content
+    cca50fd5-eae7-46d1-a534-225f1a1dd71d: SEO # SEO
+    da276327-8079-4620-ad85-b2365f59e93e: 'Public Schema' # Public Schema
+    ebf1e9e6-4b9c-409f-9820-ac7c6cd121c6: Article # Article
 plugins:
   ckeditor:
     edition: standard
@@ -18,28 +41,20 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
-  redactor:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.3.0
   seo:
     edition: standard
     enabled: true
     schemaVersion: 3.2.0
-  vite:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
-  name: 'Craft5 Scaffolding'
-  retryDuration: null
-  schemaVersion: 5.0.0.20
+  name: 'Craft 5caffold'
+  schemaVersion: 5.3.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
   defaultGroup: null
   photoSubpath: null
   photoVolumeUid: null
+  require2fa: false
   requireEmailVerification: true

@@ -1,0 +1,13 @@
+isPublic: false
+name: Private
+scope:
+  - 'sites.2eb36cc0-a60a-4071-a815-ce808da649b2:read' # Craft 5caffold
+  - 'sites.ca348b20-8894-41e8-8cbd-4b61bda22ba5:read'
+  - 'elements.drafts:read'
+  - 'elements.revisions:read'
+  - 'elements.inactive:read'
+  - 'sections.663ae8bc-bf43-4af2-9213-eb15474f28c0:read' # Home
+  - 'sections.5583777d-063b-4622-92c6-694683de9212:read' # Blog
+  - 'nestedentryfields.871e17fd-93c5-4f99-b004-ebbd5303689b:read' # Article Text
+  - 'nestedentryfields.b933d220-df03-410e-a4cc-dc86a74d19c9:read' # Article Content
+  - 'volumes.8618e083-7911-4332-a599-d8c6a8884ed8:read' # Images

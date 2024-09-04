@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 48c74af2-dc9f-4a19-8a9a-5e72de6b2950 # Blog
+handle: blog
+maxAuthors: 1
+name: Blog
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - 'http://localhost:3000/api/preview?entryUid={canonicalUid}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  2eb36cc0-a60a-4071-a815-ce808da649b2: # Craft 5caffold
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: 'blog/{slug}'
+type: channel
