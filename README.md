@@ -51,6 +51,10 @@
    ```
 5. Configure craft
    ```shell
+   ddev craft setup
+   ```
+1. Launch craft
+   ```shell
    ddev launch
    ```
 8. In the GraphQL tab, select Schemas and in the Private Schema, select all checkboxes.
