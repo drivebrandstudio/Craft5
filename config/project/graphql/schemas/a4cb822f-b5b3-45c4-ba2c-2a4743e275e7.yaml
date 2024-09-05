@@ -1,7 +1,7 @@
 isPublic: false
 name: Private
 scope:
-  - 'sites.2eb36cc0-a60a-4071-a815-ce808da649b2:read' # Craft 5caffold
+  - 'sites.2eb36cc0-a60a-4071-a815-ce808da649b2:read' # Template
   - 'sites.ca348b20-8894-41e8-8cbd-4b61bda22ba5:read'
   - 'elements.drafts:read'
   - 'elements.revisions:read'

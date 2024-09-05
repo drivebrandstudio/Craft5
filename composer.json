@@ -1,7 +1,7 @@
 {
 	"require": {
-		"craftcms/ckeditor": "4.0.6",
-		"craftcms/cms": "^5.0.0",
+		"craftcms/ckeditor": "4.2.0",
+		"craftcms/cms": "5.4.1",
 		"ether/seo": "v5.0.0-rc5",
 		"shornuk/craft-plausible": "3.0.0",
 		"vlucas/phpdotenv": "^5.4.0"

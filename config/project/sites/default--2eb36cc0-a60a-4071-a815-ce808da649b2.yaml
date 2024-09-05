@@ -1,9 +1,9 @@
-baseUrl: $PRIMARY_SITE_URL
+baseUrl: 'http://localhost:3000/'
 enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Craft 5caffold'
+name: Template
 primary: true
-siteGroup: a033033c-2320-4124-996c-2e6e2c1b2869 # Craft 5caffold
+siteGroup: a033033c-2320-4124-996c-2e6e2c1b2869 # Template
 sortOrder: 1

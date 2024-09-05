@@ -12,14 +12,14 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - 'http://localhost:3000/api/preview?entryUid={canonicalUid}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - 'http://localhost:3000/api/preview?entryUid={canonicalUid}'
 propagationMethod: all
 siteSettings:
-  2eb36cc0-a60a-4071-a815-ce808da649b2: # Craft 5caffold
+  2eb36cc0-a60a-4071-a815-ce808da649b2: # Template
     enabledByDefault: true
     hasUrls: true
     template: null

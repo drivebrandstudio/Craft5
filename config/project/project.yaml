@@ -1,4 +1,4 @@
-dateModified: 1725478762
+dateModified: 1725543905
 email:
   fromEmail: daniel@drivebrandstudio.com
   fromName: 'Craft 5caffold'
@@ -15,7 +15,7 @@ meta:
   __names__:
     2aadf49b-1991-42e6-b44a-67b81ca12c34: Thumbnail # Thumbnail
     2dc0eec0-8212-489c-92c3-5ef43da4bf6f: Summary # Summary
-    2eb36cc0-a60a-4071-a815-ce808da649b2: 'Craft 5caffold' # Craft 5caffold
+    2eb36cc0-a60a-4071-a815-ce808da649b2: Template # Template
     3eed0c77-3b75-46cd-8e31-351f3c83f416: Home # Home
     4f44f246-357b-4552-a587-38f11cd9d378: Images # Images
     7c0dae6e-f903-4671-869a-4b207ce5f4f4: Subhead # Subhead
@@ -25,7 +25,7 @@ meta:
     871e17fd-93c5-4f99-b004-ebbd5303689b: 'Article Text' # Article Text
     8618e083-7911-4332-a599-d8c6a8884ed8: Images # Images
     5583777d-063b-4622-92c6-694683de9212: Blog # Blog
-    a033033c-2320-4124-996c-2e6e2c1b2869: 'Craft 5caffold' # Craft 5caffold
+    a033033c-2320-4124-996c-2e6e2c1b2869: Template # Template
     a4cb822f-b5b3-45c4-ba2c-2a4743e275e7: Private # Private
     b9f9ee47-0657-457a-b3e2-adf8f45280fc: Text # Text
     b933d220-df03-410e-a4cc-dc86a74d19c9: 'Article Content' # Article Content
@@ -51,10 +51,3 @@ system:
   name: 'Craft 5caffold'
   schemaVersion: 5.3.0.2
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  require2fa: false
-  requireEmailVerification: true

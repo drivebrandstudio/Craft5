@@ -56,12 +56,12 @@ fieldLayouts:
         userCondition: null
 handle: subhead
 hasTitleField: false
-icon: ''
+icon: null
 name: Subhead
 showSlugField: true
 showStatusField: true
-slugTranslationKeyFormat: ''
+slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
-titleTranslationKeyFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
 titleTranslationMethod: site

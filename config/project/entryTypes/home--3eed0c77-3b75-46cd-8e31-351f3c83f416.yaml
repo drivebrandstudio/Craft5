@@ -72,12 +72,12 @@ fieldLayouts:
         userCondition: null
 handle: home
 hasTitleField: true
-icon: ''
+icon: null
 name: Home
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

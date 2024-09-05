@@ -120,12 +120,12 @@ fieldLayouts:
         userCondition: null
 handle: blog
 hasTitleField: true
-icon: ''
+icon: null
 name: Blog
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
