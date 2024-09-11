@@ -1,5 +1,5 @@
 
-##### Last reviewed 9/10/2024
+##### Last reviewed 8/21/2024
 
 # Drive Brand Studio CraftCMS v5 template
 ## Requirements
@@ -11,16 +11,63 @@
 5. Docker
 
 
-## Steps 
+## Environment Variables
+
+`PRIMARY_SITE_URL`
+
+`CRAFT_ENVIRONMENT`
+
+`CRAFT_DB_DRIVER`
+
+`CRAFT_DB_SERVER`
+
+`CRAFT_DB_PORT`
+
+`CRAFT_DB_DATABASE`
+
+`CRAFT_DB_USER`
+
+`CRAFT_DB_PASSWORD`
+
+`CRAFT_DB_SCHEMA`
+
+`CRAFT_DB_TABLE_PREFIX`
+
+`CRAFT_APP_ID`
+
+`CRAFT_SECURITY_KEY`
+
+`CRAFT_WEB_ROOT`
+
+`UI_BASE_URL`
+## Local Hosting (Dev) 
 1. Add empty .env file to the root of the project (next to .env.example)
 1. Add CRAFT_ENVIRONMENT=dev to the .env
 2. Change web > .htaccess_dev into .htaccess (or prod if you are putting this on your production server)
-1. Configure the project with ```ddev config```
-1. Start the DB server with ```ddev start```
-5. Install necessary packages with  ```ddev composer install```
-5. Install craft with  ```ddev --import-db --file=starter.sql.gz```
-5. Configure craft with  ```ddev craft setup```
-1. Launch craft with  ```ddev launch```
+1. Configure the project
+     ```shell
+     ddev config
+     ```
+1. Start the DB server
+     ```shell
+     ddev start
+     ```
+5. Install necessary packages
+   ```shell
+   ddev composer install
+   ```
+5. Install craft
+   ```shell
+   ddev --import-db --file=starter.sql.gz
+   ```
+5. Configure craft
+   ```shell
+   ddev craft setup
+   ```
+1. Launch craft
+   ```shell
+   ddev launch
+   ```
 8. In the GraphQL tab:
     - Select Schemas and in the Private Schema, make sure all checkboxes are checked.
     - Then, select the Tokens tab and create a new token. Name it something like 'Private' and copy only the token value after `Bearer`.
@@ -31,7 +78,34 @@
           ![image](https://github.com/user-attachments/assets/509fcf48-d478-4733-90ce-eddabd093cd1)
 
 
+## Cloud Hosting (Staging / Production)
 
+1. Purchase a Digital Ocean droplet
+1. Connect the droplet to RunCloud.io
+1. Create a system user and generate a password. `-----Store passwords for SSH connection to server later-------`
+1. Create a DB user, then a DB in runcloud.
+1. Create a webapp or your CMS
+  - From a GH repo
+  - Prefer www version  
+  - Generate and put the deploy key in your GH repo
+  - Add `:/home/app_user_name` to the end of open_basedir
+6. Using the Digital Ocean console or SSH (vscode or other) into the DB server
+  - run `gunzip db.sql.gz`
+  - run `mysql -u <db_user_name> -p <db_name> < db.sql`
+7. Add to DNS records
+  - if domain 
+    - `A_record @ server_ip 600s`
+    - `CName www url_name.com. 1hour`
+  - if subdomain 
+    - `A_record url_name server_ip 1hour`
+    - `CName *.url_name url_name.com. 1hour`
+8. Add SSL record
+1. Add .htaccess file to the web directory
+1. Create the graphql schema and token
+1. In CraftCMS, check Utilities > System Report > scroll to Requirements and make sure these are all removed from the list in RunCloud.io Webapp settings.
+
+
+RunCloud sets up webhooks into our github repos, so the deployment of changes should be done through that webhook. When you `git push` to main or merge a PR to main, the production site will auto-magically update.
 ### Acknowledgments
 - [CreateSean](https://github.com/CreateSean/craft-starter)
 ### Features
@@ -44,4 +118,4 @@
    - Composer 🎼 — [Composer](https://getcomposer.org/doc/)
    - CraftCMS 📝 — [CraftCMS](https://craftcms.com/docs/)
    - .env 🦺 — [.env](https://www.dotenv.org/docs)
-   - Node V18+, I recommend using NVM to install and manage — [NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+   - Node V18+, I recommend using NVM to install and manage — [NVM](https://github.com/nvm-sh/nvm)
