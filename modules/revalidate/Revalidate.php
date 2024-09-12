@@ -8,6 +8,7 @@ use craft\services\Elements;
 use yii\base\Event;
 use craft\queue\BaseJob;
 use GuzzleHttp\Client;
+use craft\elements\Entry;
 
 /**
  * Revalidate module
@@ -40,7 +41,37 @@ class Revalidate extends BaseModule
             Craft::$app->queue->push(new RevalidateJob([
                 'uri' => $element->uri,
             ]));
-        }
+        };
+
+        if ($element instanceof \craft\elements\Category) {
+            // Handle category save
+            // Retrieve entries associated with this category
+            $categoryId = $element->id;
+            $entries = Craft::$app->getEntries()->getQuery()
+               ->relatedTo($element)
+               ->all();
+        
+        foreach ($entries as $entry) {
+            // Push a job to the queue to handle revalidation asynchronously
+            Craft::$app->queue->push(new RevalidateJob([
+                'uri' => $entry->uri,
+            ]));          
+          }    
+        }; 
+            
+        if ($element instanceof \craft\elements\GlobalSet) {
+            // Handle global set save
+            // Retrieve entries associated with this global set
+            $entries = Entry::find()
+               ->relatedTo($element) // This finds entries related to the category
+               ->all(); 
+            foreach ($entries as $entry) {
+                // Push a job to the queue to handle revalidation asynchronously
+                Craft::$app->queue->push(new RevalidateJob([
+                    'uri' => $entry->uri,
+                ]));        
+            }
+        };
     }
 }
 
